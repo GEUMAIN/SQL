@@ -1,0 +1,4 @@
+select department_name, location_id,count(employee_id) cnt,round(avg(salary),2) avg_salary
+from departments D, employees E
+where E.department_id = D.department_id
+group by department_name, location_id;
