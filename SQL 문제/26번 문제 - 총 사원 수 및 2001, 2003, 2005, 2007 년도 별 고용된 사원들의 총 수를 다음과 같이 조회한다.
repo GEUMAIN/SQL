@@ -1,0 +1,15 @@
+select distinct(select count(employee_id)
+ from employees)as countall,
+  (select count(employee_id)
+  from employees
+  where hire_date like '01%') as count2001,
+  (select count(employee_id)
+  from employees
+  where hire_date like '03%') as count2003,
+  (select count(employee_id)
+  from employees
+  where hire_date like '05%') as count2005,
+  (select count(employee_id)
+  from employees
+  where hire_date like '07%') as count2007
+ from employees;
