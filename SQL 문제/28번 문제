@@ -1,0 +1,7 @@
+select employee_id, hire_date
+  2  from employees
+  3  where department_id in (select department_id
+  4  from employees
+  5  where last_name like 'Zlotkey')
+  6  and last_name != 'Zlotkey'
+  7  ;
