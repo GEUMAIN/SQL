@@ -1,0 +1,4 @@
+select last_name, employee_id
+  from employees
+  where salary > (select avg(salary)
+  from employees);
