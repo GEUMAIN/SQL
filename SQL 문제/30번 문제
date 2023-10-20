@@ -1,0 +1,5 @@
+select employee_id, last_name
+  2  from employees
+  3  where department_id in (select department_id
+  4  from employees
+  5  where last_name like '%u%');
